@@ -6,10 +6,15 @@ test:
 	javac -cp add.jar TestAdd.java
 	java TestAdd
 
+# 使用 proguard 做代码混淆
+dc:
+	java -jar cfr-0.150.jar add.jar
+
+
 .PHONY: clean
 
 clean:
 	-rm -rf com/evolution/algorithm/add/*.class
-	-rm -rf *.class *.jar
+	-rm -rf *.class add.jar
 
 
