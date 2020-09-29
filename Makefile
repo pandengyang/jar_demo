@@ -3,8 +3,8 @@ dist:
 	jar cvmf com/evolution/algorithm/add/manifest.mf add.jar com/evolution/algorithm/add/*.class
 
 test:
-	javac -cp add.jar TestAdd.java
-	java TestAdd
+	javac -encoding utf-8 -cp add.jar TestAdd.java
+	java -classpath .:./add.jar TestAdd
 
 # 使用 proguard 做代码混淆
 dc:
